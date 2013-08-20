@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="ele mooney" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<style type='text/css'>
+			.democraDiv{
+				width: 400px;
+				height: 400px;
+				background: #E3EAF0;
+				border: 1px solid #333;
+				margin-top: 100px;
+				display: block; 				
+			}
+		</style>
+		<script type="text/javascript" src="d3/d3.v3.js"></script>
+		<!--script type="text/javascript" src="d3/democracule-d3.js"></script-->
+
+	</head>
+
+	<body>
+
+		<div>
+
+			<div class='democraDiv'>
+
+			</div>
+
+			<footer>
+<script type="text/javascript">
+
+    var cwc = d3.select(".democraDiv")
+        .append("svg")
+        .attr({
+        		'width': 400,
+        		'height': 400
+        });    
+	
+	var citWork = cwc.append('circle')
+        .style({
+        	'stroke': '#F7853A',
+		'stroke-width': '10px',
+		'fill':'#E3EAF0'
+        })
+        	.attr({
+			'r': 50,
+			'cx': 200,
+			'cy': 55
+		});
+ 
+</script>
+
+				<p>
+					&copy; Copyright  by ele mooney
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
