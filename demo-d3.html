@@ -1,6 +1,6 @@
 <html>
 <head>
-	<script type="text/javascript" src="d3/d3.v3.js"></script>
+	<script type="text/javascript" src="http://localhost/src/d3play/d3/d3.v3.min.js"></script>
 </head>
 <body>
     <div id="viz"></div>
@@ -8,8 +8,8 @@
 
     var sampleSVG = d3.select("#viz")
         .append("svg")
-        .attr("width", 100)
-        .attr("height", 100);    
+        .attr("width", 400)
+        .attr("height", 400);    
 
     sampleSVG.append("circle")
         .style("stroke", "gray")
@@ -17,8 +17,19 @@
         .attr("r", 40)
         .attr("cx", 50)
         .attr("cy", 50)
-        .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
-        .on("mouseout", function(){d3.select(this).style("fill", "white");});
+        .on("mouseover", function(){d3.select(this)
+        		.transition()
+        		.duration(500)
+        		.attr("r", "80")
+        		.attr("cx", 100)
+        		.attr("cy", 100);})
+        .on("mouseout", function(){d3.select(this)
+        		.transition()
+        		.duration(500)
+        		.attr("r", "40")
+        		.attr("cx", 50)
+        		.attr("cy", 50);});
+
     
     </script>
 </body>
